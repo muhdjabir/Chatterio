@@ -1,6 +1,6 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, jsonify
 from .models import User, format_user
-from flask_jwt_extended import create_access_token
+from flask_jwt_extended import create_access_token, get_jwt,get_jwt_identity, unset_jwt_cookies
 from src import db
 
 auth = Blueprint('auth', __name__)
@@ -40,4 +40,6 @@ def login():
 
 @auth.route('/logout', methods = ['POST'])
 def logout():
-    return 'Logout'
+    response = jsonify({"msg": "logout successful"})
+    unset_jwt_cookies(response)
+    return response
