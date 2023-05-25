@@ -11,13 +11,6 @@ import {
 const NavigationBar = () => {
     const [openNav, setOpenNav] = useState(false);
 
-    // useEffect(() => {
-    //     window.addEventListener(
-    //         "resize",
-    //         () => window.innerWidth >= 960 && setOpenNav(false)
-    //     );
-    // }, []);
-
     const navList = (
         <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Typography
@@ -27,6 +20,14 @@ const NavigationBar = () => {
                 className="p-1 font-normal font-montserrat"
             >
                 Feed
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal font-montserrat"
+            >
+                People
             </Typography>
             <Typography
                 as="li"
@@ -44,14 +45,6 @@ const NavigationBar = () => {
             >
                 Calendar
             </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal font-montserrat"
-            >
-                Docs
-            </Typography>
         </ul>
     );
 
@@ -63,24 +56,24 @@ const NavigationBar = () => {
                 </Typography>
                 <div className="hidden lg:block">{navList}</div>
                 <div className="justify-between">
-                    <Button
-                        variant="gradient"
-                        size="sm"
-                        className="hidden lg:inline-block mx-5 font-montserrat"
-                    >
-                        <Link to="/login">
+                    <Link to="/login">
+                        <Button
+                            variant="gradient"
+                            size="sm"
+                            className="hidden lg:inline-block mx-5 font-montserrat"
+                        >
                             <span>Login</span>
-                        </Link>
-                    </Button>
-                    <Button
-                        variant="gradient"
-                        size="sm"
-                        className="hidden lg:inline-block font-montserrat"
-                    >
-                        <Link to="/signup">
+                        </Button>
+                    </Link>
+                    <Link to="/signup">
+                        <Button
+                            variant="gradient"
+                            size="sm"
+                            className="hidden lg:inline-block font-montserrat"
+                        >
                             <span>Sign Up</span>
-                        </Link>
-                    </Button>
+                        </Button>
+                    </Link>
                 </div>
                 <IconButton
                     variant="text"
@@ -120,7 +113,7 @@ const NavigationBar = () => {
                     )}
                 </IconButton>
             </div>
-            <Collapse open={openNav}>
+            <Collapse className="md:hidden" open={openNav}>
                 <div className="container mx-auto ">
                     <Button
                         variant="gradient"
