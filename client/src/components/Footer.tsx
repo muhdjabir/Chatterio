@@ -1,4 +1,8 @@
 import { Typography } from "@material-tailwind/react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import ArticleIcon from "@mui/icons-material/Article";
+import WebIcon from "@mui/icons-material/Web";
 
 const Footer = () => {
     return (
@@ -10,20 +14,22 @@ const Footer = () => {
                 <li>
                     <Typography
                         as="a"
-                        href="#"
+                        href="https://www.linkedin.com/in/muhd-jabir-bja/"
                         color="blue-gray"
                         className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                     >
+                        <LinkedInIcon />
                         Linkedin
                     </Typography>
                 </li>
                 <li>
                     <Typography
                         as="a"
-                        href="#"
+                        href="https://github.com/muhdjabir"
                         color="blue-gray"
                         className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                     >
+                        <GitHubIcon />
                         GitHub
                     </Typography>
                 </li>
@@ -34,17 +40,19 @@ const Footer = () => {
                         color="blue-gray"
                         className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                     >
-                        Email
+                        <ArticleIcon />
+                        Resume
                     </Typography>
                 </li>
                 <li>
                     <Typography
                         as="a"
-                        href="#"
+                        href="https://disctimeo-sg.onrender.com/"
                         color="blue-gray"
                         className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                     >
-                        Resume
+                        <WebIcon />
+                        Disctimeo
                     </Typography>
                 </li>
             </ul>

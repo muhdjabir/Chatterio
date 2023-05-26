@@ -9,7 +9,6 @@ const Login = () => {
                 alt=""
                 className="hidden md:flex md:w-1/2 lg:w-3/5 h-screen object-cover"
             />
-            {/* <Typography variant="h2">Login</Typography> */}
             <LoginForm />
         </div>
     );
