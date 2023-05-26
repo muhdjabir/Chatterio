@@ -3,7 +3,11 @@ import { Card, Input, Button, Typography } from "@material-tailwind/react";
 
 const LoginForm = () => {
     return (
-        <Card className="mx-auto" color="transparent" shadow={false}>
+        <Card
+            className="mx-auto justify-center"
+            color="transparent"
+            shadow={false}
+        >
             <Typography variant="h4" color="blue-gray">
                 Login
             </Typography>
@@ -18,7 +22,7 @@ const LoginForm = () => {
                 <Button className="mt-6" fullWidth>
                     Login
                 </Button>
-                <Link to="/register">
+                <Link to="/signup">
                     <Typography
                         color="blue"
                         className="mt-4 text-center font-normal hover:underline"
