@@ -54,6 +54,7 @@ class Todo(db.Model):
     description = db.Column(db.String(), nullable=False)
     status = db.Column(db.String(), nullable=False, default="Pending")
     category_id = db.Column(db.Integer, nullable=False)
+    user_id = db.Column(db.Integer, nullable=False)
     due = db.Column(db.Date, nullable=False)
 
     def __repr__(self):
